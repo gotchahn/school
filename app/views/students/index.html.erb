@@ -1,0 +1,28 @@
+<h1>Estudiantes</h1>
+<p>Listado de Estudiantes del sistema</p>
+<table border="1">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nombre</th>
+			<th>Email</th>
+			<th>Telefono</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<%- @students.each do |stu| %>
+			<tr>
+				<td><%= link_to stu.id, stu %></td>
+				<td><%= stu.name %></td>
+				<td><%= stu.email %></td>
+				<td><%= stu.phone %></td>
+				<td><%= link_to "Borrar", stu, method: :delete, data: {confirm: "Estas Seguro?"}  %></td>
+			</tr>
+		<%- end %>
+	</tbody>
+</table>
+
+<p>
+	<%= link_to "Agregar Estudiante", new_student_path %>
+</p>
