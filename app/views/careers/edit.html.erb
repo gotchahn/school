@@ -1,0 +1,32 @@
+<h1>Editar Carrera</h1>
+<p><em>Ingrese los datos necesarios: </em></p>
+
+<%- if @career.errors.any? %>
+	<div>
+		Por favor corrija los siguientes problemas:
+		<ul>
+			<%- @career.errors.full_messages.each do |msg| %>
+
+				<li><%= msg %></li>	
+			<%- end %>
+		</ul>
+	</div>
+<% end %>
+
+<%= form_for @career do |f| %>
+	<p>
+		<%= f.label :slug %>
+		<%= f.text_field :slug %>
+	</p>
+	<p>
+		<%= f.label :name, "Nombre" %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :orientation %>
+	</p>
+	<p>
+		<%= f.submit "Actualizar" %>
+		<%= link_to "Cancelar", careers_path %>
+	</p>
+<%- end %>

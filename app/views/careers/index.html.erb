@@ -1,0 +1,33 @@
+<h1>Carreras</h1>
+<p>Listado de carreras</p>
+
+<% if flash[:notice] %>
+	<div style="background: yellow">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
+<table border="1">
+	<thead>
+		<tr>
+			<th>Slug</th>
+			<th>Nombre</th>
+			<th>Orientacion</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<%- @careers.each do |car| %>
+			<tr>
+				<td><%= car.slug %></td>
+				<td><%= car.name %></td>
+				<td><%= car.orientation %></td>
+				<td><%= link_to "Editar", edit_career_path(car)  %></td>
+			</tr>
+		<%- end %>
+	</tbody>
+</table>
+
+<p>
+	<%= link_to "Agregar Carrera", new_career_path %>
+</p>

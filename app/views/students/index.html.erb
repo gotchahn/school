@@ -1,5 +1,12 @@
 <h1>Estudiantes</h1>
 <p>Listado de Estudiantes del sistema</p>
+
+<% if flash[:notice] %>
+	<div style="background: yellow">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
 <table border="1">
 	<thead>
 		<tr>
