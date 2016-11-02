@@ -1,0 +1,12 @@
+<p>
+	<%= f.label :slug %>
+	<%= f.text_field :slug %>
+</p>
+<p>
+	<%= f.label :name, "Nombre" %>
+	<%= f.text_field :name %>
+</p>
+<p>
+	<%= f.label :orientation %>
+	<%= f.select :orientation, Career.orientation_types %>
+</p>
