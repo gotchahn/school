@@ -17,14 +17,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<%- @careers.each do |car| %>
-			<tr>
-				<td><%= car.slug %></td>
-				<td><%= car.name %></td>
-				<td><%= car.orientation %></td>
-				<td><%= link_to "Editar", edit_career_path(car)  %></td>
-			</tr>
-		<%- end %>
+		<%= render @careers %>
 	</tbody>
 </table>
 
