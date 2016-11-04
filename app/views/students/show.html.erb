@@ -15,8 +15,14 @@
 	</li>
 </ul>
 
-<%= render partial: "student_trophies", locals: {student: @student} %>
+<%= render partial: "student_trophies", locals: {trophies: @student.trophies} %>
 
 <p>
-	<%= link_to "Editar Alumno", edit_student_path %>
+	<table>
+		<tr>
+			<td><%= link_to "Nuevo trofeo", new_student_trophy_path(@student) %></td>
+			<td><%= link_to "Editar Alumno", edit_student_path %></td>
+		</tr>
+	</table>
+	
 </p>

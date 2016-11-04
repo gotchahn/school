@@ -1,4 +1,4 @@
-<% if student.trophies.any? %>
+<% if trophies.any? %>
 	<div>
 		<h2>Trofeos del Estudiante: </h2>
 		<table border="2">
@@ -8,7 +8,7 @@
 				<th>Puntos</th>
 			</thead>
 			<tbody>
-				<%= render student.trophies %>
+				<%= render trophies %>
 			</tbody>
 		</table>
 	</div>
