@@ -14,6 +14,9 @@
 		<strong><%= nice_date(@student.birthday_at) %></strong>
 	</li>
 </ul>
+
+<%= render partial: "student_trophies", locals: {student: @student} %>
+
 <p>
-	<%= link_to "Editar", edit_student_path %>
+	<%= link_to "Editar Alumno", edit_student_path %>
 </p>

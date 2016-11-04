@@ -7,7 +7,7 @@ Hello::Application.routes.draw do
   root 'welcome#index'
 
   resources :students do
-    resources :trophies
+    resources :trophies, except: [:index, :show]
   end
 
   resources :careers
