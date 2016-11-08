@@ -6,4 +6,8 @@ module StudentsHelper
 	def index_title
 		content_tag(:h1, "Estudiantes del Sistema")
 	end
+
+	def total_points(student)
+		student.trophies.sum(:points)
+	end
 end

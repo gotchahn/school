@@ -42,6 +42,15 @@ class StudentsController < ApplicationController
   	redirect_to students_path
   end
 
+  def statistic
+    @student = Student.find(params[:id])
+  end
+
+  def ranking
+    @students = Student.all
+    @students = @students.sort{ |s1,s2| s2.trophies.sum(:points) <=> s1.trophies.sum(:points) }
+  end
+
   protected
 
   	def student_params
