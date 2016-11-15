@@ -21,6 +21,13 @@ class TrophiesController < ApplicationController
   def update
   end
 
+  def destroy
+    @student = Student.find(params[:student_id])
+    @trophy = @student.trophies.find(params[:id])
+    @trophy.destroy
+    redirect_to @student
+  end
+
   protected
 
   	def trophy_params

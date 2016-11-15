@@ -10,6 +10,10 @@
 		<strong><%= @student.phone %></strong>
 	</li>
 	<li>
+		Carrera:
+		<strong><%= @student.career.try(:name) %></strong>
+	</li>
+	<li>
 		Nacio en:
 		<strong><%= nice_date(@student.birthday_at) %></strong>
 	</li>

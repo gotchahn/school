@@ -2,4 +2,5 @@
 	<td><%= trophy.id %></td>
 	<td><%= trophy.description %></td>
 	<td><%= trophy.points %></td>
+	<td><%= link_to "Eliminar", [trophy.student, trophy], method: :delete, data: {confirm: "Seguro?"} %></td>
 </tr>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161101013412) do
+ActiveRecord::Schema.define(version: 20161111014511) do
 
   create_table "careers", force: true do |t|
     t.string   "slug"
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(version: 20161101013412) do
     t.integer  "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "career_id"
   end
+
+  add_index "students", ["career_id"], name: "index_students_on_career_id"
 
   create_table "trophies", force: true do |t|
     t.integer  "points"

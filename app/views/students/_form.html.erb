@@ -11,6 +11,10 @@
 	<%= f.text_field :phone %>
 </p>
 <p>
+	<%= f.label :career_id, "Carrera" %>
+	<%= f.select :career_id, Career.pluck(:name, :id) %>
+</p>
+<p>
 	<%= f.label :birthday_at, "Nacio en" %>
 	<%= f.date_field :birthday_at %>
 </p>
