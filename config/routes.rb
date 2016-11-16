@@ -9,7 +9,10 @@ Hello::Application.routes.draw do
   resources :students do
     resources :trophies, except: [:index, :show]
     get :statistic, on: :member
-    get :ranking, on: :collection
+    collection do
+      get :ranking
+      get :supremes
+    end
   end
 
   resources :careers

@@ -6,6 +6,10 @@
 <%= form_for @student do |f| %>
 	<%= render partial: "form", locals: {f: f} %>
 	<p>
+		<%= f.label :graduation_index %>
+		<%= f.number_field :graduation_index %>
+	</p>
+	<p>
 		<%= f.submit "Actualizar" %>
 		<%= link_to "Cancelar", @student %>
 		<%= link_to "Borrar", @student, method: :delete, data: {confirm: "Estas Seguro?"}  %>

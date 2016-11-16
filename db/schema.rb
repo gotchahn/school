@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111014511) do
+ActiveRecord::Schema.define(version: 20161116012021) do
 
   create_table "careers", force: true do |t|
     t.string   "slug"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20161111014511) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "career_id"
+    t.decimal  "graduation_index"
   end
 
   add_index "students", ["career_id"], name: "index_students_on_career_id"

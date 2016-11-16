@@ -51,10 +51,16 @@ class StudentsController < ApplicationController
     @students = @students.sort{ |s1,s2| s2.trophies.sum(:points) <=> s1.trophies.sum(:points) }
   end
 
+  def supremes
+    @students = Student.magna_cum_lade
+  end
+
   protected
 
   	def student_params
-  		params.require(:student).permit(:name, :email, :phone, :birthday_at, :career_id)
+  		params.require(:student).permit(:name, 
+        :email, :phone, :birthday_at, 
+        :career_id, :graduation_index)
   	end
 
 

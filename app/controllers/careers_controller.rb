@@ -1,6 +1,6 @@
 class CareersController < ApplicationController
   def index
-  	@careers = Career.order(:slug)
+  	@careers = Career.unscoped.order(:slug)
   end
 
   def new

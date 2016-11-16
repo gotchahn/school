@@ -9,6 +9,8 @@ class Student < ActiveRecord::Base
 	before_create :check_birthday, :first_trophy
 	#before_validation :hack
 
+	scope :magna_cum_lade, ->{where("graduation_index > 90")}
+
 	protected
 
 		def check_birthday
@@ -19,9 +21,10 @@ class Student < ActiveRecord::Base
 		end
 
 		def first_trophy
+			self.trophies.build(description: "Bienvenido a la URails", points: 5)
 		end
 
 		def hack
-			errors[:base] << "because i want to"
+			errors[:name] << "because i want to"
 		end
 end
