@@ -2,5 +2,5 @@
 	<td><%= link_to student.id, student %></td>
 	<td><%= student.name %></td>
 	<td><%= student.email %></td>
-	<td><%= student.phone %></td>
+	<td><%= student.career.try(:name) %></td>
 </tr>

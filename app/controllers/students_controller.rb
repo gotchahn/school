@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-  	@students = Student.order(:name)
+  	@students = Student.includes(:career).order(:name)
   end
 
   def show
