@@ -7,17 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<table>
-		<tbody>
-			<tr>
-				<td><%= link_to "Home", root_path %></td>
-				<td><%= link_to "Estudiantes", students_path %></td>
-				<td><%= link_to "Carreras", careers_path %></td>
-			</tr>
-		</tbody>
-	</table>
+
+	<div class="wrapper col0"></div>
+
+	<div class="wrapper col1">
+		<div id="header">
+			<div id="logo">
+				<h1><%= link_to "RUBYSTUDENT University", root_path %></h1>
+				<p>Sistema en Ruby para Manejo de Estudiantes</p>
+			</div>
+		</div>
+
+		<div class="fl_right">
+			<p>Hecho por los Alumnos de Experiencia de usuario</p>
+		</div>
+
+		<br class="clear">
+	</div>
+
+	<div class="wrapper col2">
+		<div id="topnav">
+			<ul>
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Estudiantes", students_path %></li>
+				<li><%= link_to "Carreras", careers_path %></li>
+			</ul>
+			<br class="clear">
+		</div>
+
+	</div>
 
 	<%= yield %>
+	
 
 </body>
 </html>

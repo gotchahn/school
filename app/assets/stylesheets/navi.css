@@ -8,8 +8,8 @@ Licence URI: http://www.os-templates.com/template-terms
 File: Navigation CSS
 */
 
-#topnav{height:75px; overflow:hidden;}
-#topnav ul{display:block; width:100%; height:75px; margin:0; padding:0; list-style:none;}
+#topnav{overflow:hidden; background-color: #591434}
+#topnav ul{display:block; width:100%; height:50px; margin:0; padding:0; list-style:none;}
 #topnav ul li ul{display:none;}
 #topnav ul li.active ul{display:block; position:absolute; top:35px; left:0; width:100%; height:40px;}
 #topnav li{display:block; float:left;}
