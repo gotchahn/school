@@ -1,20 +1,20 @@
-<p>
+<div class="form-group">
 	<%= f.label :name, "Nombre" %>
-	<%= f.text_field :name %>
-</p>
-<p>
+	<%= f.text_field :name, class: "form-control", placeholder: "Su Nombre" %>
+</div>
+<div class="form-group">
 	<%= f.label :email %>
-	<%= f.email_field :email %>
-</p>
-<p>
+	<%= f.email_field :email, class: "form-control" %>
+</div>
+<div class="form-group">
 	<%= f.label :phone, "Telefono" %>
-	<%= f.text_field :phone %>
-</p>
-<p>
+	<%= f.text_field :phone, class: "form-control" %>
+</div>
+<div class="form-group">
 	<%= f.label :career_id, "Carrera" %>
-	<%= f.select :career_id, Career.pluck(:name, :id) %>
-</p>
-<p>
+	<%= f.select :career_id, Career.pluck(:name, :id), {}, class: "form-control" %>
+</div>
+<div class="form-group">
 	<%= f.label :birthday_at, "Nacio en" %>
-	<%= f.date_field :birthday_at %>
-</p>
+	<%= f.date_field :birthday_at, class: "form-control" %>
+</div>

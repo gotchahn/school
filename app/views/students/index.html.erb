@@ -7,7 +7,7 @@
 	</div>
 <% end %>
 
-<table border="1">
+<table border="1" class="table table-striped">
 	<thead>
 		<tr>
 			<th>Id</th>
@@ -23,9 +23,9 @@
 
 <table>
 	<tbody>
-		<td><%= link_to "Agregar Estudiante", new_student_path %></td>
-		<td><%= link_to "Ranking", ranking_students_path %></td>
-		<td><%= link_to "Supremes", supremes_students_path %></td>
+		<td><%= link_to "Agregar Estudiante", new_student_path, class: "btn btn-default" %></td>
+		<td><%= link_to "Ranking", ranking_students_path, class: "btn btn-default" %></td>
+		<td><%= link_to "Supremes", supremes_students_path, class: "btn btn-default" %></td>
 	</tbody>
 </table>
 

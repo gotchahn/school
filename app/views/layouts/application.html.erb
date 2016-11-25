@@ -8,9 +8,24 @@
 </head>
 <body>
 	<ul class="nav nav-pills">
-		<li role="presentation"><%= link_to "Home", root_path %></li>
-		<li role="presentation"><%= link_to "Estudiantes", students_path %></li>
-		<li role="presentation"><%= link_to "Carreras", careers_path %></li>
+		<li role="presentation">
+			<%= link_to root_path do %>
+				<span class="fa fa-home"></span>
+				Home
+			<% end %>
+		</li>
+		<li role="presentation">
+			<%= link_to students_path do %>
+				<span class="fa fa-graduation-cap"></span>
+				Estudiantes
+			<% end %>
+			</li>
+		<li role="presentation">
+			<%= link_to careers_path do %>
+				<span class="fa fa-book"></span>
+				Carreras
+			<% end %>
+		</li>
 	</ul>
 
 	<div class="container-fluid">
