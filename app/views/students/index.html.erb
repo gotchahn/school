@@ -1,3 +1,4 @@
+
 <%= index_title %>
 <p><%= index_description %></p>
 
@@ -21,11 +22,9 @@
 	</tbody>
 </table>
 
-<table>
-	<tbody>
-		<td><%= link_to "Agregar Estudiante", new_student_path, class: "btn btn-default" %></td>
-		<td><%= link_to "Ranking", ranking_students_path, class: "btn btn-default" %></td>
-		<td><%= link_to "Supremes", supremes_students_path, class: "btn btn-default" %></td>
-	</tbody>
-</table>
+<div class="btn-group" role="group">
+	<%= link_to "Agregar Estudiante", new_student_path, class: "btn btn-default" %>
+	<%= link_to "Ranking", ranking_students_path, class: "btn btn-default" %>
+	<%= link_to "Supremes", supremes_students_path, class: "btn btn-default" %>
+</div>
 

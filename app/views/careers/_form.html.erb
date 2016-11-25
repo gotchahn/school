@@ -1,12 +1,12 @@
-<p>
+<div class="form-group">
 	<%= f.label :slug %>
-	<%= f.text_field :slug %>
-</p>
-<p>
+	<%= f.text_field :slug, class: "form-control" %>
+</div>
+<div class="form-group">
 	<%= f.label :name, "Nombre" %>
-	<%= f.text_field :name %>
-</p>
-<p>
+	<%= f.text_field :name, class: "form-control" %>
+</div>
+<div class="form-group">
 	<%= f.label :orientation %>
-	<%= f.select :orientation, Career.orientation_types %>
-</p>
+	<%= f.select :orientation, Career.orientation_types, {}, class: "form-control" %>
+</div>

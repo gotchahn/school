@@ -7,30 +7,45 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<ul class="nav nav-pills">
-		<li role="presentation">
-			<%= link_to root_path do %>
-				<span class="fa fa-home"></span>
-				Home
-			<% end %>
-		</li>
-		<li role="presentation">
-			<%= link_to students_path do %>
-				<span class="fa fa-graduation-cap"></span>
-				Estudiantes
-			<% end %>
-			</li>
-		<li role="presentation">
-			<%= link_to careers_path do %>
-				<span class="fa fa-book"></span>
-				Carreras
-			<% end %>
-		</li>
-	</ul>
+	<nav class="navbar navbar-inverse">
+
+		<div class="container-fluid">
+
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Rubystudent</a>
+	    </div>
+
+	    <ul class="nav navbar-nav">
+	    	<li>
+					<%= link_to root_path do %>
+						<span class="fa fa-home"></span>
+						Home
+					<% end %>
+				</li>
+				<li>
+					<%= link_to students_path do %>
+						<span class="fa fa-graduation-cap"></span>
+						Estudiantes
+					<% end %>
+					</li>
+				<li>
+					<%= link_to careers_path do %>
+						<span class="fa fa-book"></span>
+						Carreras
+					<% end %>
+				</li>
+	    </ul>
+	  </div>
+	</nav>
 
 	<div class="container-fluid">
-		<%= yield %>	
+		<%= yield %>
+
+		<hr>
+		<footer>
+			<p>2016. Experiencia de Usuario - UNITEC SPS</p>
+		</footer>
 	</div>
-	
+
 </body>
 </html>

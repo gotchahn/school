@@ -2,5 +2,10 @@
 	<td><%= career.slug %></td>
 	<td><%= career.name %></td>
 	<td><%= career.orientation %></td>
-	<td><%= link_to "Editar", edit_career_path(career)  %></td>
+	<td>
+    <%= link_to edit_career_path(career) do  %>
+      <span class="fa fa-edit"></span>
+      Editar
+    <% end %>
+  </td>
 </tr>
