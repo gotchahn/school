@@ -24,8 +24,6 @@ ActiveRecord::Schema.define(version: 20161116012021) do
   create_table "students", force: true do |t|
     t.text     "name"
     t.datetime "birthday_at"
-    t.string   "email"
-    t.integer  "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "career_id"

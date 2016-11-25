@@ -28,17 +28,27 @@
 	<div class="wrapper col2">
 		<div id="topnav">
 			<ul>
-				<li><%= link_to "Home", root_path %></li>
-				<li><%= link_to "Estudiantes", students_path %></li>
-				<li><%= link_to "Carreras", careers_path %></li>
+				<li class="active">
+					<%= link_to "Home", root_path %>
+					<ul>
+						<li><%= link_to "Agregar Estudiante", new_student_path %></li>
+						<li><%= link_to "Ranking", ranking_students_path %></li>
+						<li><%= link_to "Supremes", supremes_students_path %></li>
+					</ul>
+				</li>
+				<li>
+					<%= link_to "Estudiantes", students_path %>
+
+				</li>
+				<li class="last"><%= link_to "Carreras", careers_path %></li>
 			</ul>
-			<br class="clear">
 		</div>
 
 	</div>
 
-	<%= yield %>
-	
+	<div class="wrapper col3">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
