@@ -1,5 +1,10 @@
 class SessionsController < ApplicationController
+  skip_before_action :authenticate, only: [:new, :create]
+
   def new
+  	if current_user
+  		redirect_to students_path
+  	end
   end
 
   def create
@@ -16,5 +21,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+  	logout
   end
 end

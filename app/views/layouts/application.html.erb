@@ -22,24 +22,33 @@
 						Home
 					<% end %>
 				</li>
-				<li>
-					<%= link_to students_path do %>
-						<span class="fa fa-graduation-cap"></span>
-						Estudiantes
-					<% end %>
+				<% if current_user %>
+					<li>
+						<%= link_to students_path do %>
+							<span class="fa fa-graduation-cap"></span>
+							Estudiantes
+						<% end %>
+						</li>
+					<li>
+						<%= link_to careers_path do %>
+							<span class="fa fa-book"></span>
+							Carreras
+						<% end %>
 					</li>
-				<li>
-					<%= link_to careers_path do %>
-						<span class="fa fa-book"></span>
-						Carreras
-					<% end %>
-				</li>
-				<li>
-					<%= link_to login_path do %>
-						<span class="fa fa-sign-in"></span>
-						Login
-					<% end %>
-				</li>
+					<li>
+						<%= link_to logout_path, data: {method: :delete} do %>
+							<span class="fa fa-sign-out"></span>
+							Logout
+						<% end %>
+					</li>
+				<% else %>
+					<li>
+						<%= link_to login_path do %>
+							<span class="fa fa-sign-in"></span>
+							Login
+						<% end %>
+					</li>
+				<% end %>
 	    </ul>
 	  </div>
 	</nav>

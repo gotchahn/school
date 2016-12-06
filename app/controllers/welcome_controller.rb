@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
+  skip_before_action :authenticate
+
   def index
-  	num = 10
-  	@x = "Hello #{num} World"
   end
 end
