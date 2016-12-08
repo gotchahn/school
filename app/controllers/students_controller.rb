@@ -1,6 +1,14 @@
 class StudentsController < ApplicationController
   def index
   	@students = Student.includes(:career).order(:name)
+    query = params[:q]
+    if query
+      @students = @students.where("name LIKE '%#{query}%' OR email LIKE '%#{query}%'")
+    end
+
+    if request.xhr?
+      render json: {message: "Filtraste con #{query}"}
+    end
   end
 
   def show
